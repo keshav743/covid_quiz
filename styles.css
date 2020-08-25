@@ -1,0 +1,49 @@
+.project-body{
+    background-color: #ff6b6b;
+}
+.intro-part{
+    padding: 1rem ;
+    background-color: white;
+    margin: 10% 30%;
+    text-align: center;
+    border-radius: 25px;
+}
+.question-part{
+    text-align: left;
+    display: none;
+    border-radius: 25px;
+    padding: 1rem;
+    background-color: white;
+    margin: 10% 30%;
+}
+.result-div{
+    text-align: left;
+    display: none;
+    border-radius: 25px;
+    padding: 1rem;
+    background-color: white;
+    margin: 10% 30%;
+}
+.opt-item{
+    border-radius: 25px;
+    background-color: thistle;
+    padding: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+span{
+    font-size: 1.3rem;
+}
+
+.next-btn{
+    margin-left: 1rem;
+}
+
+.opt-0,.opt-1,.opt-2,.opt-3{
+    display: block;
+    border-style: none;
+    background-color: thistle;
+    text-align: left;
+    padding: 0.7rem;
+    font-size: 1.2rem;
+}

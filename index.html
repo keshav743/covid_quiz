@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Covid-19 Quiz</title>
+  </head>
+
+  <body class="project-body">
+
+    <div class="intro-part">
+      <h2>COVID-19 QUIZ</h2>
+      <p>Total number of questions: 5</p>
+      <button class="btn btn-outline-danger btn-md start-btn" onclick="hideIntroDiv()">Start</button>
+    </div>
+
+    <div class="question-part">
+
+      <div class="question-displayed">
+        <h3 class="question-html">Question</h3>
+      </div>
+
+      <div class="options-displayed">
+
+        <div class="opt-item opt-item-0"><button id="opt-0-id" class="opt-0" >Option-1</button></div>
+        <div class="opt-item opt-item-1"><button id="opt-1-id" class="opt-1" >Option-2</button></div>
+        <div class="opt-item opt-item-2"><button id="opt-2-id" class="opt-2" >Option-3</button></div>
+        <div class="opt-item opt-item-3"><button id="opt-3-id" class="opt-3" >Option-4</button></div>
+
+      </div>
+
+      <br>
+
+      <div class="next-button">
+        <button class="btn btn-outline-success btn-lg next-btn" onclick="nextQuestion()">Next</button>
+      </div>
+
+      <hr>
+
+    </div>
+
+    <div class="result-div">
+      <h4>Attempted: <span class="score-span">5</span></h4>
+      <h4>Correct Answers: <span class="correct-span">5</span></h4>
+      <h4>Wrong Answers: <span class="wrong-span">5</span></h4>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+  </body>
+</html>
