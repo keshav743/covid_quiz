@@ -68,6 +68,7 @@ var attempted = 0;
 var person = "";
 
 function hideIntroDiv(){
+    person = prompt("What is your name?");
     $('.intro-part').hide();
     $('.question-part').toggle();
     $('.question-html').html(questions[0].q.toString());
@@ -96,6 +97,7 @@ function nextQuestion(){
     }else{
         $('.question-part').toggle();
         $('.result-div').toggle();
+        $('.name-span').html(person.toString());
         $('.score-span').html(attempted.toString());
         $('.correct-span').html(score.toString());
         $('.wrong-span').html(wrong.toString());
