@@ -1,4 +1,4 @@
-const questions = [
+var questions = [
     
     {
         q: "How is COVID-19 passed on",
@@ -59,8 +59,9 @@ const questions = [
         opt: ["More than 50","More than 100","More than 150","More than 200"],
         correctAnswer: "More than 200",
     }
-]
+];
 
+questions = _.shuffle(questions);
 var count = 0;
 var score = 0;
 var wrong = 0;
