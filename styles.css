@@ -16,6 +16,10 @@
     background-color: white;
     margin: 10% 30%;
 }
+.question-displayed{
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
 .result-div{
     text-align: left;
     display: none;
@@ -48,6 +52,9 @@ span{
     font-size: 1.2rem;
 }
 
-.name-span{
+.name-span,.high-span{
     font-size: 1.8rem;
+}
+.countdown-div{
+    padding: 1rem;
 }

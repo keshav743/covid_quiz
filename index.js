@@ -65,8 +65,8 @@ questions = _.shuffle(questions);
 var count = 0;
 var score = 0;
 var wrong = 0;
+var timeTaken = 0;
 var attempted = 0;
-var person = "";
 
 function hideIntroDiv(){
     person = prompt("What is your name?");
@@ -76,6 +76,7 @@ function hideIntroDiv(){
     for(var i = 0; i<4; i++){
         $('.opt-'+i).html(questions[0].opt[i].toString());
     }
+    startTimer(120,$('.count-down'));
 } 
 
 function nextQuestion(){
@@ -102,6 +103,7 @@ function nextQuestion(){
         $('.score-span').html(attempted.toString());
         $('.correct-span').html(score.toString());
         $('.wrong-span').html(wrong.toString());
+        $('.time-span').html(timeTaken.toString()); 
     }
 }
 
@@ -117,6 +119,30 @@ function diableButtons(a,b,c,d){
     $("#opt-"+b+"-id").prop('disabled', true);
     $("#opt-"+c+"-id").prop('disabled', true);
     $("#opt-"+d+"-id").prop('disabled', true);
+}
+
+function startTimer(duration, display) {
+    var timeleft = duration;
+    var downloadTimer = setInterval(function(){
+        if(timeleft <= 0){
+            timeTaken = 120;
+            $('.question-part').toggle();
+            $('.result-div').toggle();
+            $('.name-span').html(person.toString());
+            $('.score-span').html(attempted.toString());
+            $('.correct-span').html(score.toString());
+            $('.wrong-span').html(wrong.toString()); 
+            $('.time-span').html(timeTaken.toString());         
+            clearInterval(downloadTimer);
+        }
+        if(attempted == 10){
+            timeTaken = 120-timeleft;
+            clearInterval(downloadTimer);
+        }
+        display.html(timeleft);
+        timeleft -= 1;
+    }, 1000);
+
 }
 
 $("#opt-0-id").click(function() {
