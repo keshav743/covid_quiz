@@ -1,4 +1,5 @@
 const questions = [
+    
     {
         q: "How is COVID-19 passed on",
         opt: ["Through droplets that come from your mouth and nose when you cough or breathe out",
@@ -32,6 +33,31 @@ const questions = [
         q: "Name the vaccine that is jointly developed by the German company BioNTech and US pharma giant Pfizer for COVID-19",
         opt: ["BNT162","PICOVACC","Both A and B","Neither A nor B"],
         correctAnswer: "BNT162",
+    },
+    {
+        q: "What is Coronavirus?",
+        opt: ["It is a large family of viruses."," It belongs to the family of Nidovirus.","Both A and B are correct","Only A is correct."],
+        correctAnswer: "Both A and B are correct",
+    },
+    {
+        q: "The first case of novel coronavirus was identified in",
+        opt: ["Beijing","Shanghai","Wuhan, Hubei","Tianjin"],
+        correctAnswer: "Wuhan, Hubei",
+    },
+    {
+        q: " From where coronavirus got its name?",
+        opt: ["Due to their crown-like projections.","Due to their leaf-like projections.","Due to their surface structure of bricks.","None of the above"],
+        correctAnswer: "Due to their crown-like projections.",
+    },
+    {
+        q: "Which of the following statement is/are correct about Favipiravir?",
+        opt: ["Favipiravir is an antiviral COVID-19 drug.","Glenmark Pharmaceuticals under the brand name FabiFlu has launched an antiviral drug Favipiravir.","It is India's first COVID-19 drug launched, priced at Rs 103 per tablet.","All the above are correct"],
+        correctAnswer: "All the above are correct",
+    },
+    {
+        q: "How many countries, areas or territories are suffering from novel coronavirus outbreak in the World?",
+        opt: ["More than 50","More than 100","More than 150","More than 200"],
+        correctAnswer: "More than 200",
     }
 ]
 
@@ -39,6 +65,7 @@ var count = 0;
 var score = 0;
 var wrong = 0;
 var attempted = 0;
+var person = "";
 
 function hideIntroDiv(){
     $('.intro-part').hide();
@@ -60,7 +87,7 @@ function nextQuestion(){
     $('.opt-item-3').css("background-color", "thistle");
     $('#opt-3-id').css("background-color", "thistle");
     count+=1;
-    if(count<5){
+    if(count<10){
         $('.question-html').html(questions[count].q.toString());
         for(var i = 0; i<4; i++){
             $('.opt-'+i).html(questions[count].opt[i].toString());
