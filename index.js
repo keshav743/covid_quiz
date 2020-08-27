@@ -104,6 +104,8 @@ function nextQuestion(){
         $('.correct-span').html(score.toString());
         $('.wrong-span').html(wrong.toString());
         $('.time-span').html(timeTaken.toString()); 
+        $('.per-time-span').html((timeTaken/attempted).toString());  
+        $('.ratio-span').html((score/wrong).toString()); 
     }
 }
 
@@ -132,7 +134,9 @@ function startTimer(duration, display) {
             $('.score-span').html(attempted.toString());
             $('.correct-span').html(score.toString());
             $('.wrong-span').html(wrong.toString()); 
-            $('.time-span').html(timeTaken.toString());         
+            $('.time-span').html(timeTaken.toString());  
+            $('.per-time-span').html((timeTaken/attempted).toString());  
+            $('.ratio-span').html((score/wrong).toString());         
             clearInterval(downloadTimer);
         }
         if(attempted == 10){
